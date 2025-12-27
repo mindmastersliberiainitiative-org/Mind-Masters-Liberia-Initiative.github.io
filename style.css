@@ -37,16 +37,16 @@ footer {
   transition: 0.3s;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
-.about-hero {
-  background: url('../images/logo.png') center/300px no-repeat,
-              linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('../images/education-bg.jpg') center/cover no-repeat;
-  height: 60vh;
-  color: #fff;
-  display: flex;
-  align-items: center;
-}
-
-.about-hero .overlay {
+.body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: url('file_000000000b8871f5a04812bd66b260d2.png') no-repeat center center;
+  background-size: 400px auto;
+  opacity: 0.05;
+  z-index: -1;
+  pointer-events: none;
 }
