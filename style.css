@@ -1,3 +1,36 @@
+body {
+  /* This points to your logo file */
+  background-image: url('file_000000000b8871f5a04812bd66b260d2.png'); 
+  
+  /* This centers it and keeps it from moving when you scroll */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* This makes it large but ensures it fits the screen */
+  background-size: 50%; 
+  
+  /* This creates the "Watermark" effect by making it very faint */
+  opacity: 1; /* Note: We use a different trick for opacity below */
+}
+
+/* To make the background faint without making your text faint, 
+   we use a "Pseudo-element" */
+body::before {
+  content: "";
+  background-image: url('file_000000000b8871f5a04812bd66b260d2.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05; /* Adjust this number (0.01 to 0.1) to make it lighter or darker */
+  z-index: -1; /* This pushes the image BEHIND your text */
+}
 <link rel="stylesheet" href="assets/css/style.css">
 body {
   font-family: "Segoe UI", sans-serif;
