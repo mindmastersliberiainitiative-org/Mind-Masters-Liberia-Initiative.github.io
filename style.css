@@ -32,32 +32,8 @@ footer {
 }
 
 }
-/* Contact Form Styling */
-.contact-form {
-  max-width: 500px;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/.hover-shadow:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
-
-.contact-form label {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #0a2a43;
-}
-
-.contact-form input, 
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-
