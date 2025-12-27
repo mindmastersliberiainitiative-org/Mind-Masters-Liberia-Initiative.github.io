@@ -24,3 +24,9 @@ footer {
   background: #111;
   color: #ccc;
 }
+/* Hover effect for program cards */
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
