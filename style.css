@@ -30,3 +30,40 @@ footer {
   transition: 0.3s;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
+/* Expandable Card (Accordion) Styling */
+.accordion {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+details {
+  background: #ffffff;
+  border-left: 5px solid #d4af37; /* Gold border */
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+summary {
+  padding: 15px;
+  font-weight: bold;
+  color: #0a2a43; /* Dark Blue */
+  cursor: pointer;
+  list-style: none; /* Removes the default arrow */
+}
+
+summary::before {
+  content: "➕ "; /* Adds a plus sign */
+  font-size: 0.8rem;
+}
+
+details[open] summary::before {
+  content: "➖ "; /* Changes to minus when open */
+}
+
+.content {
+  padding: 0 15px 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
