@@ -1,118 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="manifest" href="manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js');
-  }
-</script>
-  
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mind Masters Liberia Initiative</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h2>MMLI</h2>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="programs.html">Programs</a></li>
-    <li><a href="team.html">Our Team</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav><nav>
-  <a href="index.html">
-    <img src="file_000000000b8871f5a04812bd66b260d2.png" alt="MMLI Logo" style="height: 60px; width: auto;">
-  </a>
-          </nav>
-  
-<div class="announcement-bar">
-  <span>📢 <strong>LATEST:</strong> Registration for the 2026 Math Quizzing Competition is now OPEN!</span>
-</div>
-<header class="hero">
-  <h1>Mind Masters Liberia Initiative</h1>
-  <p>Discovering and Developing Mathematical Talents in Liberia</p>
-</header>
-<section class="section">
-  <h2>Our Mission</h2>
-  <p>
-    Mind Masters Liberia Initiative is dedicated to promoting academic excellence,
-    critical thinking, and mathematical talent development among young learners
-    across Liberia.
-  </p>
-</section>
-<section class="section light">
-  <h2>What We Do</h2>
-  <ul>
-    <li>Mathematics Quizzing Competitions</li>
-    <li>Talent Identification & Mentorship</li>
-    <<div class="image-container">
-      li>Academic Outreach Programs</li>
-    <li>STEM Awareness & Training</li>
-  </ul>
-</section>
-<footer>
-  <p>© 2025 Mind Masters Liberia Initiative</p>
-    .image-box {
-  max-width: 90%;
-  margin: 20px auto;
-  padding: 10px;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
 
-.image-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-}
-
-</footer>
-</body>
-</html>
-<section class="section">
-  <h2 style="color: #d4af37;">MMLI Official Resources</h2>
-  <div class="document-grid">
-    
-    <div class="doc-card">
-      <a href="Bylaws.pdf" target="_blank">
-        <p>📜 MMLI Bylaws</p>
-      </a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">MMLI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <div class="doc-card">
-      <a href="MathChampionship.pdf" target="_blank">
-        <p>🏆 Mathematics Championship</p>
-      </a>
-    </div>
-
-    <div class="doc-card">
-      <a href="PLayingCard.pdf" target="_blank">
-        <p>🎴 Player Card Information</p>
-      </a>
-    </div>
-
-    <div class="doc-card">
-      <a href="Rulesandregulation.pdf" target="_blank">
-        <p>⚖️ Rules & Regulations</p>
-      </a>
-    </div>
-
-    <div class="doc-card">
-      <a href="JuniorHighOutlins.pdf" target="_blank">
-        <p>📚 Junior High Outline</p>
-      </a>
-    </div>
-
-    <div class="doc-card">
-      <a href="SeniorHighOutline.pdf" target="_blank">
-        <p>🎓 Senior High Outline</p>
-      </a>
-    </div>
-
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Mind Masters Liberia Initiative</h1>
+    <p class="lead mt-3">
+      Discovering and Developing Mathematical Talents in Liberia
+    </p>
+    <a href="programs.html" class="btn btn-warning btn-lg mt-3">
+      Register for Math Quizzing
+    </a>
   </div>
 </section>
+
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title">Who We Are</h2>
+    <p>
+      Mind Masters Liberia Initiative is an academic organization dedicated to
+      identifying, nurturing, and empowering young mathematical talents across Liberia
+      through competitions, mentorship, and structured academic programs.
+    </p>
+  </div>
+</section>
+
+<footer class="text-center py-3">
+  © 2026 Mind Masters Liberia Initiative
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
