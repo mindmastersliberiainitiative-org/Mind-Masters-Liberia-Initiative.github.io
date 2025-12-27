@@ -80,3 +80,15 @@ footer {
   color: #0a1f44;
   font-weight: bold;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* This keeps the logo level with the menu links */
+  padding: 10px 5%;
+}
+
+nav img {
+  display: block;
+  max-width: 100%;
+  }
+                                
