@@ -40,66 +40,31 @@
 </section>
 
 <!-- MEMBERSHIP FORMS -->
-<section class="py-5">
-  <form action="https://formspree.io/f/mzdbaryp" method="POST" class="mx-auto" style="max-width:600px;">
-  <div class="container">
+<form action="https://formspree.io/f/mzdbaryp" method="POST">
 
-    <!-- PARTNER -->
-    <form action="https://formspree.io/f/mzdbaryp" method="POST" class="mx-auto" style="max-width:600px;">
-    <div class="membership-box">
-      <h3>Partner Membership</h3>
-      <p>For organizations, institutions, and individuals willing to support MMLI.</p>
-      <form>
-        <input class="form-control mb-3" placeholder="Organization / Individual Name">
-        <input class="form-control mb-3" placeholder="Email Address">
-        <input class="form-control mb-3" placeholder="Phone Number">
-        <textarea class="form-control mb-3" rows="3" placeholder="How would you like to partner with us?"></textarea>
-        <button class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+  <label>Full Name</label>
+  <input type="text" name="name" required>
 
-    <!-- SCHOOL -->
-    <form action="https://formspree.io/f/mzdbaryp" method="POST" class="mx-auto" style="max-width:600px;">
-    <div class="membership-box">
-      <h3>School Membership</h3>
-      <p>For primary, junior high, senior high schools, and universities.</p>
-      <form>
-        <input class="form-control mb-3" placeholder="School Name">
-        <input class="form-control mb-3" placeholder="Location">
-        <input class="form-control mb-3" placeholder="Contact Person">
-        <input class="form-control mb-3" placeholder="Contact Email">
-        <button class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+  <label>Email Address</label>
+  <input type="email" name="email" required>
 
-    <!-- STUDENT -->
-    <div class="membership-box">
-      <h3>Student Membership</h3>
-      <p>For students interested in competitions, mentorship, and academic growth.</p>
-      <form>
-        <input class="form-control mb-3" placeholder="Full Name">
-        <input class="form-control mb-3" placeholder="School / University">
-        <input class="form-control mb-3" placeholder="Grade / Level">
-        <input class="form-control mb-3" placeholder="Email or Phone">
-        <button class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+  <label>Phone Number</label>
+  <input type="tel" name="phone" required>
 
-    <!-- VOLUNTEER -->
-    <form action="https://formspree.io/f/mzdbaryp" method="POST" class="mx-auto" style="max-width:600px;"> 
-    <div class="membership-box">
-      <h3>Volunteer Membership</h3>
-      <p>For educators, professionals, and individuals who want to serve.</p>
-      <form>
-        <input class="form-control mb-3" placeholder="Full Name">
-        <input class="form-control mb-3" placeholder="Area of Expertise">
-        <input class="form-control mb-3" placeholder="Email">
-        <textarea class="form-control mb-3" rows="3" placeholder="Why do you want to volunteer?"></textarea>
-        <button class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+  <label>Membership Type</label>
+  <select name="membership_type" required>
+    <option value="">Select one</option>
+    <option value="Student">Student</option>
+    <option value="School">School</option>
+    <option value="Partner">Partner</option>
+    <option value="Volunteer">Volunteer</option>
+  </select>
 
-  </div>
+  <label>Message / Additional Information</label>
+  <textarea name="message"></textarea>
+
+  <button type="submit">Submit Application</button>
+    </form>
 </section>
 
 <footer class="bg-dark text-white text-center py-3">
