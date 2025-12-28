@@ -1,53 +1,10 @@
-/* Professional Navbar */
-.navbar-container {
-  width: 100%;
-  background: #1f2937;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 10px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.navbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
+/* Navbar Logo sizing */
 .navbar-logo {
-  height: 50px;
+  height: 45px;
   width: auto;
-  margin-right: 10px;
   object-fit: contain;
 }
 
-.brand-text {
-  color: #f9fafb;
-  font-size: 1.2rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.navbar-links a {
-  color: #f9fafb;
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.navbar-links a:hover {
-  color: #fbbf24;
 }
 
 body {
