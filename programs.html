@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Programs | MMLI</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Professional Responsive Navbar -->
+
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="file_000000000b8871f5a04812bd66b260d2.png" alt="MMLI Logo" class="navbar-logo">
-      <span class="ms-2">Mind Masters Liberia Initiative</span>
-    </a>
+    <a class="navbar-brand fw-bold" href="index.html">Mind Masters Liberia Initiative</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+        <li class="nav-item"><a class="nav-link active" href="programs.html">Programs</a></li>
         <li class="nav-item"><a class="nav-link" href="resources.html">Academic Resources</a></li>
         <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -36,121 +31,51 @@
   </div>
 </nav>
 
-
-<!-- Programs Section -->
-<section class="py-5 mt-5 bg-light">
-  <div class="container">
-    <h2 class="section-title text-center mb-5 animate__animated animate__fadeInDown">Core Programs & Initiatives</h2>
-
-    <!-- Competitions -->
-    <h4 class="fw-bold mb-3 animate__animated animate__fadeInLeft">Competitions</h4>
-    <div class="row g-4 mb-5">
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-primary text-white">
-          <i class="bi bi-calculator-fill fs-1 mb-3"></i>
-          <h5>National Mathematics Championship (NMC)</h5>
-          <p>Liberia’s premier Math competition for primary to university levels.</p>
-        </div>
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h1 class="mb-4">Our Core Programs & Initiatives</h1>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <h4>National Mathematics Championship (NMC)</h4>
+        <p>Liberia’s premier math competition for primary to university levels.</p>
       </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-success text-white">
-          <i class="bi bi-trophy-fill fs-1 mb-3"></i>
-          <h5>Mind Masters League</h5>
-          <p>League-style academic competition for schools and universities.</p>
-        </div>
+      <div class="col-md-6 col-lg-4">
+        <h4>Math, Science and Debate Genius Incubator</h4>
+        <p>Elite mentorship program preparing students for global competitions.</p>
       </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-warning text-dark">
-          <i class="bi bi-journal-text fs-1 mb-3"></i>
-          <h5>Junior & Senior High Quizzing Tournaments</h5>
-          <p>Competitive quizzes for junior and senior high students.</p>
-        </div>
+      <div class="col-md-6 col-lg-4">
+        <h4>Mind Masters League (Academic Super League)</h4>
+        <p>League-style academic competition for schools and universities.</p>
       </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-info text-white">
-          <i class="bi bi-puzzle-fill fs-1 mb-3"></i>
-          <h5>Elementary Multipliers & Math Puzzles</h5>
-        </div>
+      <div class="col-md-6 col-lg-4">
+        <h4>Digital Academy & Mobile App</h4>
+        <p>Interactive platform for quizzes, math modules, and learning resources.</p>
       </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-danger text-white">
-          <i class="bi bi-people-fill fs-1 mb-3"></i>
-          <h5>High Schools & Universities Debate</h5>
-        </div>
+      <div class="col-md-6 col-lg-4">
+        <h4>Future Builders Summit</h4>
+        <p>Annual summit uniting top students, educators, and innovators.</p>
       </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-secondary text-white">
-          <i class="bi bi-mortarboard-fill fs-1 mb-3"></i>
-          <h5>Universities Science Bowl</h5>
-        </div>
+      <div class="col-md-6 col-lg-4">
+        <h4>School & Campus Clubs Network</h4>
+        <p>Establish clubs for peer-led learning and competitions.</p>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <h4>National Math, Science and Debate Day</h4>
+        <p>Annual celebration with exhibitions and public competitions.</p>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <h4>Special Features</h4>
+        <p>Teacher & Coach Empowerment, Mind Wall of Fame, Quiz for Peace & Nation Building</p>
       </div>
     </div>
-
-    <!-- Mentorship & Digital Programs -->
-    <h4 class="fw-bold mb-3 animate__animated animate__fadeInLeft">Mentorship & Digital Programs</h4>
-    <div class="row g-4 mb-5">
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-warning text-dark">
-          <i class="bi bi-lightbulb-fill fs-1 mb-3"></i>
-          <h5>Math, Science & Debate Genius Incubator</h5>
-          <p>Elite mentorship preparing students for global contests.</p>
-        </div>
-      </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-primary text-white">
-          <i class="bi bi-phone-fill fs-1 mb-3"></i>
-          <h5>Digital Academy & Mobile App</h5>
-          <p>Interactive platform for quizzes, modules, and learning resources.</p>
-        </div>
-      </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-success text-white">
-          <i class="bi bi-people fs-1 mb-3"></i>
-          <h5>School & Campus Clubs Network</h5>
-        </div>
-      </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-info text-white">
-          <i class="bi bi-calendar-event-fill fs-1 mb-3"></i>
-          <h5>Future Builders Summit</h5>
-        </div>
-      </div>
-      <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-danger text-white">
-          <i class="bi bi-star-fill fs-1 mb-3"></i>
-          <h5>National Math, Science & Debate Day</h5>
-        </div>
-      </div>
-    </div>
-
-    <!-- Special Features -->
-    <h4 class="fw-bold mb-3 text-center animate__animated animate__fadeInLeft">Special Features</h4>
-    <div class="row g-4 justify-content-center mb-5">
-      <div class="col-md-3 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-secondary text-white">
-          <i class="bi bi-person-badge-fill fs-1 mb-3"></i>
-          <h5>Teacher & Coach Empowerment</h5>
-        </div>
-      </div>
-      <div class="col-md-3 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-warning text-dark">
-          <i class="bi bi-award-fill fs-1 mb-3"></i>
-          <h5>Mind Wall of Fame</h5>
-        </div>
-      </div>
-      <div class="col-md-3 animate__animated animate__fadeInUp">
-        <div class="card h-100 text-center p-3 shadow-sm hover-shadow bg-primary text-white">
-          <i class="bi bi-peace fs-1 mb-3"></i>
-          <h5>Quiz for Peace & Nation Building</h5>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<footer class="text-center py-3">© 2026 MMLI</footer>
+<footer class="bg-dark text-white text-center py-3">
+  © 2026 Mind Masters Liberia Initiative
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-        </html>
+</html>
+
