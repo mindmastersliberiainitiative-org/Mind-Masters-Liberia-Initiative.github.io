@@ -199,3 +199,42 @@ section.py-5.bg-white p {
   color: #666;
   margin-bottom: 20px;
 }
+
+
+/* =======================
+   BRIEF HISTORY SECTION
+======================= */
+.brief-history {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.brief-history .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.brief-history p {
+  color: #444;
+  line-height: 1.7;
+}
+
+.brief-history ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.founder-photo {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 350px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-photo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
