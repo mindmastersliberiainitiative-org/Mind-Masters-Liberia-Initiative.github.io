@@ -156,3 +156,25 @@ footer {
   box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
+/* =======================
+   WELCOME & OVERVIEW SECTION
+======================= */
+section.py-5.bg-white h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+section.py-5.bg-white p.lead {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+section.py-5.bg-white h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+section.py-5.bg-white p {
+  font-size: 0.95rem;
+  color: #666;
+   }
