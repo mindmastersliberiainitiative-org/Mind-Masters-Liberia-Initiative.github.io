@@ -71,20 +71,21 @@
 
     <!-- STUDENT -->
     <div class="membership-box">
-      <h3>Student Membership</h3>
-      <p>For students interested in competitions, mentorship, and academic growth.</p>
-      <form>
-        <input class="form-control mb-3" placeholder="Full Name">
-        <input class="form-control mb-3" placeholder="School / University">
-        <input class="form-control mb-3" placeholder="Grade / Level">
-        <input class="form-control mb-3" placeholder="Email or Phone">
-        <button class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+  <input type="hidden" name="form_type" value="Student Membership">
+
+  <input type="text" name="full_name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="text" name="school" placeholder="School Name">
+  <input type="text" name="level" placeholder="Academic Level">
+
+  <button type="submit">Apply</button>
+</form>
 
     <!-- VOLUNTEER -->
     <div class="membership-box">
-      <h3>Volunteer Membership</h3>
+      <<input type="hidden" name="form_type" value="Volunteer Membership">
       <p>For educators, professionals, and individuals who want to serve.</p>
       <form>
         <input class="form-control mb-3" placeholder="Full Name">
