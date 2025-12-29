@@ -180,25 +180,31 @@ section.py-5.bg-white p {
   color: #666;
    }
 
-/* =======================
-   MEMBERSHIP FORMS
-======================= */
-.membership-box {
-  background: #ffffff;
-  border-radius: 15px;
-  padding: 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+.membership-section {
+  padding: 80px 20px;
+  background: #f9fafb;
 }
 
-.membership-box h3 {
-  font-weight: 700;
+.membership-section h1 {
+  text-align: center;
+  font-size: 2.4rem;
   margin-bottom: 10px;
 }
 
-.membership-box p {
-  color: #666;
-  margin-bottom: 20px;
+.membership-section p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.form-wrapper {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 
