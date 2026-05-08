@@ -1,1 +1,1 @@
-# Mind-Masters-Liberia-Initiative.Org
+# Mind-Masters-Liberia-Initiative
