@@ -25,38 +25,105 @@
         <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
         <li class="nav-item"><a class="nav-link" href="resources.html">Academic Resources</a></li>
         <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-        <li class="nav-item"><a class="nav-link active" href="membership.html">Membership</a></li>
-        <li class="nav-item"><a class="nav-link active" href="announcement.html">Announcement</a></li>
+        <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+        <li class="nav-item"><a class="nav-link" href="announcement.html">Announcement</a></li>
         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- PAGE HEADER -->
+<section class="bg-dark text-white text-center py-5">
+  <div class="container">
+    <h1 class="fw-bold">Get in Touch</h1>
+    <p class="lead mb-0">Questions about registration, partnerships, or programs? We'd love to hear from you.</p>
+  </div>
+</section>
+
 <section class="py-5">
-  <form action="https://formspree.io/f/mzdbaryp" method="POST" class="mx-auto" style="max-width:600px;">
-  
-  <input type="hidden" name="form_type" value="Contact Form">
+  <div class="container">
+    <div class="row g-5">
 
-  <div class="mb-3">
-    <label class="form-label">Full Name</label>
-    <input type="text" name="name" class="form-control" required>
+      <!-- CONTACT INFO -->
+      <div class="col-md-5">
+        <h3 class="fw-bold mb-4">Contact Information</h3>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="me-3 fs-4">📞</div>
+          <div>
+            <strong>Phone</strong><br>
+            0775990043<br>
+            0889581634
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="me-3 fs-4">📧</div>
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:mindmastersliberiainitiative@gmail.com">mindmastersliberiainitiative@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="me-3 fs-4">📍</div>
+          <div>
+            <strong>Location</strong><br>
+            Paynesville City, Liberia
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start">
+          <div class="me-3 fs-4">⏱️</div>
+          <div>
+            <strong>Response Time</strong><br>
+            We typically respond within 1–2 business days.
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="col-md-7">
+        <h3 class="fw-bold mb-4">Send Us a Message</h3>
+        <form action="https://formspree.io/f/mzdbaryp" method="POST">
+
+          <input type="hidden" name="form_type" value="Contact Form">
+
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Subject</label>
+            <select name="subject" class="form-select">
+              <option>General Inquiry</option>
+              <option>Back-to-School Quiz Challenge 2026</option>
+              <option>Sponsorship / Partnership</option>
+              <option>Membership</option>
+              <option>Media</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-control" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
   </div>
-
-  <div class="mb-3">
-    <label class="form-label">Email</label>
-    <input type="email" name="email" class="form-control" required>
-  </div>
-
-  <div class="mb-3">
-    <label class="form-label">Message</label>
-    <textarea name="message" class="form-control" rows="4" required></textarea>
-  </div>
-
-  <button type="submit" class="btn btn-primary w-100">
-    Send Message
-  </button>
-</form>
 </section>
 
 <footer class="bg-dark text-white text-center py-3">
