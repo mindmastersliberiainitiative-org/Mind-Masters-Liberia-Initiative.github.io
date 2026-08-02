@@ -38,7 +38,7 @@
 </nav>
 
 <!-- HERO SECTION -->
-<section class="bg-primary text-white text-center py-5">
+<section class="reveal bg-primary text-white text-center py-5">
   <div class="container">
     <h1 class="display-5 fw-bold">Academic Excellence Through Mathematics, Science and Intellectual Competitions</h1>
     <p class="lead">Discovering, developing, and empowering Liberia's brightest minds.</p>
@@ -47,7 +47,7 @@
 </section>
 
 <!-- FLAGSHIP EVENT BANNER -->
-<section class="py-4 bg-warning">
+<section class="reveal py-4 bg-warning">
   <div class="container text-center">
     <span class="badge bg-dark mb-2">Registration Open &middot; September 2026</span>
     <h2 class="fw-bold">Back-to-School Academic Quiz Challenge 2026</h2>
@@ -57,7 +57,7 @@
 </section>
 
 <!-- WELCOME & OVERVIEW SECTION -->
-<section class="py-5 bg-white">
+<section class="reveal py-5 bg-white">
   <div class="container">
     <h2 class="text-center mb-4">Welcome to Mind Masters Liberia Initiative</h2>
     <p class="text-center lead mb-4">
@@ -88,12 +88,12 @@
 </section>
 
 <!-- IMAGE GALLERY SECTION -->
-<section class="py-5 bg-light">
+<section class="reveal py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-5">Highlights & Moments</h2>
     <div class="row g-4">
 
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="card shadow-sm h-100">
           <img src="back-to-school-flyer.jpg" class="card-img-top" alt="Back-to-School Academic Quiz Challenge 2026">
           <div class="card-body text-center">
@@ -102,20 +102,11 @@
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="card shadow-sm h-100">
           <img src="olympiad-training-flyer.jpg" class="card-img-top" alt="Olympiad Training Program">
           <div class="card-body text-center">
             <p class="mb-0 fw-bold">Olympiad Training Program</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="founder-hallison-thomas.jpg" class="card-img-top" alt="Founder B. Hallison F. Thomas">
-          <div class="card-body text-center">
-            <p class="mb-0 fw-bold">B. Hallison F. Thomas, Founder</p>
           </div>
         </div>
       </div>
@@ -125,7 +116,7 @@
 </section>
 
 <!-- PAMO 2026 SECTION -->
-<section class="py-5 bg-white">
+<section class="reveal py-5 bg-white">
   <div class="container">
     <h2 class="text-center mb-2">Liberia at the 33rd Panafrican Mathematical Olympiad (PAMO) 2026</h2>
     <p class="text-center text-muted mb-5">Yamoussoukro, Côte d'Ivoire &middot; June 26 &ndash; July 4, 2026</p>
@@ -166,7 +157,7 @@
 </section>
 
 <!-- STUDENT SPOTLIGHT TEASER -->
-<section class="py-5 bg-white">
+<section class="reveal py-5 bg-white">
   <div class="container">
     <h2 class="text-center mb-2">Meet Our Olympiad Trainees</h2>
     <p class="text-center text-muted mb-5">Real students, already building real skills under our Olympiad Training Program.</p>
@@ -220,7 +211,7 @@
 </section>
 
 <!-- ABOUT PREVIEW -->
-<section class="py-5 bg-light">
+<section class="reveal py-5 bg-light">
   <div class="container text-center">
     <h2 class="mb-4">An Academic Development Initiative</h2>
     <p class="mb-4">Mind Masters Liberia Initiative is dedicated to identifying and nurturing
@@ -230,7 +221,7 @@
 </section>
 
 <!-- PROGRAMS PREVIEW -->
-<section class="py-5">
+<section class="reveal py-5">
   <div class="container text-center">
     <h2 class="mb-4">Our Programs</h2>
     <p class="mb-4">Explore our core programs and initiatives for students of all levels.</p>
@@ -252,5 +243,29 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Navbar shadow on scroll
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Scroll-reveal for sections
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
 </body>
-</html>
+  </html>
+  
