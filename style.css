@@ -1,265 +1,177 @@
+  /* ==========================================================================
+   Mind Masters Liberia Initiative — Brand Stylesheet
+   Navy + Gold, drawn from the MMLI logo
+   ========================================================================== */
 
-/* =======================
-   GLOBAL STYLES
-======================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --mmli-navy: #0f2a52;
+  --mmli-navy-dark: #0a1d3a;
+  --mmli-gold: #f2a900;
+  --mmli-gold-dark: #d99400;
+  --mmli-green: #2f7d4f;
+  --mmli-cream: #f8f7f3;
+  --mmli-text: #1c1c1c;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--mmli-text);
+  scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-}
-
-/* =======================
-   NAVBAR STYLES
-======================= */
+h1, h2, h3, h4, h5, h6,
 .navbar-brand {
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: var(--mmli-navy-dark) !important;
+  transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .navbar-nav .nav-link {
-  margin-left: 1rem;
-  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--mmli-gold);
+  transition: width 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
 }
 
 .navbar-nav .nav-link.active {
-  color: #ffc107 !important;
+  color: var(--mmli-gold) !important;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffc107 !important;
-}
-
-/* =======================
-   HERO SECTION
-======================= */
-.hero {
-  background-color: #0d6efd;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.hero p {
-  font-size: 1.25rem;
-}
-
-.hero-btn {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-/* =======================
-   SECTIONS
-======================= */
-.section {
-  padding: 60px 20px;
-}
-
-.section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.section p {
-  font-size: 1.1rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* =======================
-   CARDS (About & Team)
-======================= */
-.card {
-  border: none;
-  border-radius: 15px;
-  transition: all 0.3s ease-in-out;
-}
-
-.card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-/* =======================
-   BUTTONS
-======================= */
+/* ---------- Buttons ---------- */
 .btn {
-  border-radius: 50px;
-  padding: 10px 25px;
+  border-radius: 6px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
-/* =======================
-   FOOTER
-======================= */
-footer {
-  background-color: #212529;
-  color: #fff;
-  padding: 20px 0;
-  font-size: 0.95rem;
+.btn-primary {
+  background-color: var(--mmli-navy);
+  border-color: var(--mmli-navy);
 }
 
-/* =======================
-   ACADEMIC RESOURCES BUTTONS
-======================= */
+.btn-primary:hover {
+  background-color: var(--mmli-navy-dark);
+  border-color: var(--mmli-navy-dark);
+}
+
+.btn-warning {
+  background-color: var(--mmli-gold);
+  border-color: var(--mmli-gold);
+  color: var(--mmli-navy-dark);
+}
+
+.btn-warning:hover {
+  background-color: var(--mmli-gold-dark);
+  border-color: var(--mmli-gold-dark);
+  color: var(--mmli-navy-dark);
+}
+
 .btn-outline-primary {
-  border-width: 2px;
-  font-weight: 500;
+  color: var(--mmli-navy);
+  border-color: var(--mmli-navy);
 }
 
 .btn-outline-primary:hover {
-  background-color: #0d6efd;
-  color: #fff !important;
+  background-color: var(--mmli-navy);
+  border-color: var(--mmli-navy);
 }
 
-/* =======================
-   RESPONSIVE MEDIA QUERIES
-======================= */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-/* =======================
-   IMAGE GALLERY STYLES
-======================= */
-.card img {
-  border-radius: 12px;
+/* ---------- Cards ---------- */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(15, 42, 82, 0.15) !important;
 }
 
-/* =======================
-   WELCOME & OVERVIEW SECTION
-======================= */
-section.py-5.bg-white h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
+.card-img-top {
+  transition: transform 0.4s ease;
 }
 
-section.py-5.bg-white p.lead {
-  font-size: 1.2rem;
-  color: #555;
+.card:hover .card-img-top {
+  transform: scale(1.04);
 }
 
-section.py-5.bg-white h5 {
+/* ---------- Section backgrounds ---------- */
+.bg-primary {
+  background-color: var(--mmli-navy) !important;
+}
+
+.bg-dark {
+  background-color: var(--mmli-navy-dark) !important;
+}
+
+/* ---------- Scroll-reveal animation ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children of a revealed row (cards etc.) */
+.reveal .col-md-3.reveal-item,
+.reveal .col-md-4.reveal-item,
+.reveal .col-md-6.reveal-item,
+.reveal .col-6.reveal-item {
+  transition-delay: calc(var(--reveal-index, 0) * 0.08s);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .card,
+  .card-img-top,
+  .btn,
+  .navbar-nav .nav-link::after {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ---------- Badges ---------- */
+.badge {
   font-weight: 600;
-  margin-bottom: 10px;
-}
-
-section.py-5.bg-white p {
-  font-size: 0.95rem;
-  color: #666;
-   }
-
-.membership-section {
-  padding: 80px 20px;
-  background: #f9fafb;
-}
-
-.membership-section h1 {
-  text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
-.membership-section p {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #555;
-}
-
-.form-wrapper {
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-
-/* =======================
-   BRIEF HISTORY SECTION
-======================= */
-.brief-history {
-  background-color: #f9f9f9;
-  padding: 60px 0;
-}
-
-.brief-history .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-}
-
-.brief-history p {
-  color: #444;
-  line-height: 1.7;
-}
-
-.brief-history ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-
-.founder-photo {
-  border-radius: 12px;
-  width: 100%;
-  max-width: 350px;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.founder-photo:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-..announcement-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 26px;
-  background: #1f3c88;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.announcement-btn:hover {
-  background: #162e66;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
+  letter-spacing: 0.02em;
+                         }
