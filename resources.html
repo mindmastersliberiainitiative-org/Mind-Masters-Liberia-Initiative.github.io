@@ -12,7 +12,10 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Mind Masters Liberia Initiative</a>
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="logo.png" alt="MMLI Logo" height="36" class="me-2">
+      Mind Masters Liberia Initiative
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -34,7 +37,7 @@
 </nav>
 
 <!-- PAGE HEADER -->
-<section class="bg-dark text-white text-center py-5">
+<section class="reveal bg-dark text-white text-center py-5">
   <div class="container">
     <h1 class="fw-bold">Academic Resources</h1>
     <p class="lead mb-0">Outlines, rules, and Olympiad training materials for students and coaches.</p>
@@ -42,7 +45,7 @@
 </section>
 
 <!-- GENERAL RESOURCES -->
-<section class="py-5 bg-light">
+<section class="reveal py-5 bg-light">
   <div class="container">
     <h2 class="mb-4">General Resources</h2>
     <div class="row g-3">
@@ -91,7 +94,7 @@
 </section>
 
 <!-- OLYMPIAD TRAINING LIBRARY -->
-<section class="py-5">
+<section class="reveal py-5">
   <div class="container">
     <h2 class="mb-2">Olympiad Training Library</h2>
     <p class="text-muted mb-4">Materials organized by core branch of mathematics, under the Liberia National Olympiad Foundation curriculum.</p>
@@ -186,6 +189,22 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
 </body>
-  </html>
-  
+</html>
