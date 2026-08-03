@@ -1,4 +1,4 @@
-  /* ==========================================================================
+/* ==========================================================================
    Mind Masters Liberia Initiative — Brand Stylesheet
    Navy + Gold, drawn from the MMLI logo
    ========================================================================== */
@@ -157,21 +157,154 @@ h1, h2, h3, h4, h5, h6,
   transition-delay: calc(var(--reveal-index, 0) * 0.08s);
 }
 
+/* ---------- Badges ---------- */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Pulsing "New" badge */
+.badge.bg-primary,
+.badge.bg-warning {
+  animation: mmliPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes mmliPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(242, 169, 0, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(242, 169, 0, 0); }
+}
+
+/* ---------- Hero entrance animation (plays on page load, no scroll needed) ---------- */
+@keyframes mmliFadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mmliFadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+section.bg-primary h1,
+section.bg-dark h1 {
+  animation: mmliFadeInDown 0.7s ease both;
+}
+
+section.bg-primary p.lead,
+section.bg-dark p.lead {
+  animation: mmliFadeInUp 0.7s ease 0.15s both;
+}
+
+section.bg-primary .btn,
+section.bg-dark .btn {
+  animation: mmliFadeInUp 0.7s ease 0.3s both;
+}
+
+/* ---------- Floating stat icons ---------- */
+@keyframes mmliFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.fs-2 {
+  display: inline-block;
+  animation: mmliFloat 3s ease-in-out infinite;
+}
+
+/* Stagger the float slightly per column so they don't move in lockstep */
+.row .col-6:nth-child(2) .fs-2,
+.row .col-md-3:nth-child(2) .fs-2 { animation-delay: 0.3s; }
+.row .col-6:nth-child(3) .fs-2,
+.row .col-md-3:nth-child(3) .fs-2 { animation-delay: 0.6s; }
+.row .col-6:nth-child(4) .fs-2,
+.row .col-md-3:nth-child(4) .fs-2 { animation-delay: 0.9s; }
+
+/* ---------- Icon-grid card icons (emoji) bounce on hover ---------- */
+.card .fs-1 {
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .fs-1 {
+  transform: scale(1.2) rotate(-6deg);
+}
+
+/* ---------- Button shine sweep on hover ---------- */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn:hover::before {
+  left: 130%;
+}
+
+/* ---------- Navbar logo subtle pulse on load ---------- */
+.navbar-brand img {
+  animation: mmliLogoPop 0.6s ease;
+}
+
+@keyframes mmliLogoPop {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* ---------- Extra reveal directions ---------- */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
+  .reveal-left,
+  .reveal-right,
   .card,
   .card-img-top,
+  .card .fs-1,
   .btn,
-  .navbar-nav .nav-link::after {
+  .btn::before,
+  .badge,
+  .fs-2,
+  .navbar-brand img,
+  .navbar-nav .nav-link::after,
+  section.bg-primary h1, section.bg-dark h1,
+  section.bg-primary p.lead, section.bg-dark p.lead,
+  section.bg-primary .btn, section.bg-dark .btn {
+    animation: none !important;
     transition: none !important;
     transform: none !important;
     opacity: 1 !important;
   }
 }
-
-/* ---------- Badges ---------- */
-.badge {
-  font-weight: 600;
-  letter-spacing: 0.02em;
+letter-spacing: 0.02em;
                          }
