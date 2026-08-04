@@ -37,7 +37,7 @@
 </nav>
 
 <!-- PAGE HEADER -->
-<section class="reveal bg-primary text-white text-center py-5">
+<section class="bg-primary text-white text-center py-5">
   <div class="container">
     <h1 class="fw-bold">Our Team</h1>
     <p class="lead mb-0">The leadership guiding Mind Masters Liberia Initiative.</p>
@@ -148,7 +148,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.01, rootMargin: '0px 0px -10px 0px' });
   revealEls.forEach(el => observer.observe(el));
 </script>
 </body>
