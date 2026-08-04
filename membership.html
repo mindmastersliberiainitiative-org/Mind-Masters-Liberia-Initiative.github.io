@@ -37,7 +37,7 @@
 </nav>
 
 <!-- PAGE HEADER -->
-<section class="reveal bg-primary text-white text-center py-5">
+<section class="bg-primary text-white text-center py-5">
   <div class="container">
     <h1 class="fw-bold">Join & Support Mind Masters Liberia Initiative</h1>
     <p class="lead mb-0">Become a member, partner, or supporter in shaping Liberia's academic future.</p>
@@ -254,9 +254,8 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.01, rootMargin: '0px 0px -10px 0px' });
   revealEls.forEach(el => observer.observe(el));
 </script>
 </body>
-          </html>
-          
+</html>
